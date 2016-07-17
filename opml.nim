@@ -1,8 +1,8 @@
 import xmltree, xmlparser, streams, sequtils
 
 type Feed* = object
-  title: string
-  url: string
+  title*: string
+  url*: string
 
 proc parse*(file: string) : seq[Feed] =
   let content = newStringStream(readFile(file))
